@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taskify – Smart Daily Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="app-card">
+      <h1>🧠 Taskify – Smart Daily Planner</h1>
+
+      <div class="top-row">
+        <input type="text" id="taskInput" placeholder="Task description..." />
+        <input type="date" id="dueDate" />
+      </div>
+
+      <div class="middle-row">
+        <button id="addTaskBtn">Add Task</button>
+      </div>
+
+      <input type="text" id="searchInput" placeholder="🔍 Search tasks..." />
+
+      <div class="filters">
+        <button class="filter" data-type="all">All</button>
+        <button class="filter" data-type="pending">Pending</button>
+        <button class="filter" data-type="completed">Completed</button>
+        <button id="sortByDate">Sort by Date</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

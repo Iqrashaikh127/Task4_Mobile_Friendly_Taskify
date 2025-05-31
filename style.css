@@ -1,0 +1,186 @@
+/* Base setup */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.app-card {
+  background: linear-gradient(145deg, #f6e9ff, #ffe6f1); 
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  color: #812ea5; 
+  margin-bottom: 10px;
+}
+
+/* Input sections */
+.top-row,
+.middle-row {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+#searchInput {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Add Task Button */
+#addTaskBtn {
+  padding: 10px 20px;
+  background-color: #ec407a; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#addTaskBtn:hover {
+  background-color: #c2185b;
+}
+
+/* Sort Button */
+#sortByDate {
+  background-color: #7e57c2;
+  color: white;
+  border: none;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #7e57c2;
+  color: white;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #7e57c2;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+li.overdue {
+  border-left-color: #e74c3c !important;
+  background: #fff0f0;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-info span {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.complete-btn,
+.delete-btn {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.complete-btn { background-color: #007bff; }
+.delete-btn { background-color: #dc3545; }
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .app-card {
+    padding: 20px;
+  }
+
+  .top-row,
+  .middle-row,
+  .filters {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .top-row input,
+  .middle-row button,
+  #searchInput {
+    width: 100%;
+  }
+
+  .filters button {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 120px;
+  }
+
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .task-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .task-info span {
+    font-size: 0.9rem;
+  }
+}
